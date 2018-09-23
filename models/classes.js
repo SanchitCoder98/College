@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 
 var Class = mongoose.model('Class',{
+
   name:{
     type: String,
     required: true,
