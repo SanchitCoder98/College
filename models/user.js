@@ -7,7 +7,7 @@ var User = mongoose.model('User',{
     trim: true
   },
   classes:[{
-    type: Schema.Types.ObjectId
+    type: mongoose.Schema.Types.ObjectId
   }]
 });
 

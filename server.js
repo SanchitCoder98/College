@@ -22,7 +22,6 @@ app.post('/classes', (req, res) => {
   var clas = new Class({
     name: req.body.name,
     profname: req.body.profname,
-    profID: req.body.profID,
     deadlines: req.body.deadlines
   })
 
@@ -31,6 +30,14 @@ app.post('/classes', (req, res) => {
   },(e) => {
     res.status(400).send(e);
   });
+});
+
+app.get('/classes/:profname',(req, res) => {
+  Class.find({profname:`${req.params.profname}`}, (err, docs) => {
+    res.send(docs);
+  });
+},(e) => {
+  res.status(400).send(e);
 });
 
 app.get('/users',(req, res) => {

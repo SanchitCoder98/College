@@ -11,11 +11,8 @@ var Class = mongoose.model('Class',{
     required: true,
     trim: true
   },
-  profID:{
-    type: Schema.Types.ObjectId
-  },
   deadlines:[{
-    type: Schema.Types.ObjectId
+    type: mongoose.Schema.Types.ObjectId
   }]
 });
 
